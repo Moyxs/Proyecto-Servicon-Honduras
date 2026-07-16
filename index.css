@@ -276,6 +276,7 @@ section{padding:130px 0;position:relative;}
   content:"";position:absolute;inset:0;
   background:repeating-linear-gradient(115deg, rgba(245,180,0,0.035) 0px, rgba(245,180,0,0.035) 1px, transparent 1px, transparent 14px);
   opacity:0;transition:opacity 0.4s ease;
+  pointer-events:none;
 }
 .service-card:hover{transform:translateY(-8px);border-color:var(--yellow-dim);}
 .service-card:hover::after{opacity:1;}
@@ -504,5 +505,8 @@ a.contact-card:focus-visible{outline:2px solid var(--yellow);outline-offset:3px;
   margin-top:30px;display:flex;gap:14px;flex-wrap:wrap;
 }
 @media (max-width:600px){
-  .modal-box{padding:30px 22px;}
+  .modal-overlay{padding:12px;}
+  .modal-box{padding:28px 18px;width:calc(100% - 0px);}
+  .modal-cta{flex-direction:column;}
+  .modal-cta a,.modal-cta button{width:100%;text-align:center;justify-content:center;}
 }
